@@ -141,6 +141,7 @@
     <Content Include="images\ps4\psfour4.jpg" />
     <Content Include="images\ps4\psfour5.jpg" />
     <Content Include="scripts\app\app.js" />
+    <Content Include="scripts\app\directives.js" />
     <Content Include="scripts\libs\angular-route.js" />
     <Content Include="scripts\libs\angularfire.js" />
     <Content Include="scripts\libs\firebase-simple-login.js" />
