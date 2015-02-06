@@ -124,6 +124,18 @@
     <Content Include="fonts\ionicons.svg" />
     <Content Include="fonts\ionicons.ttf" />
     <Content Include="fonts\ionicons.woff" />
+    <Content Include="images\iPhone6\iphone1.jpg" />
+    <Content Include="images\iPhone6\iphone2.jpg" />
+    <Content Include="images\iPhone6\iphone3.jpg" />
+    <Content Include="images\iPhone6\iphone4.jpg" />
+    <Content Include="images\omen\omen1.jpg" />
+    <Content Include="images\omen\omen2.jpg" />
+    <Content Include="images\omen\omen3.jpg" />
+    <Content Include="images\ps4\psfour1.jpg" />
+    <Content Include="images\ps4\psfour2.jpg" />
+    <Content Include="images\ps4\psfour3.jpg" />
+    <Content Include="images\ps4\psfour4.jpg" />
+    <Content Include="images\ps4\psfour5.jpg" />
     <Content Include="scripts\app\app.js" />
     <Content Include="scripts\libs\angular-route.js" />
     <Content Include="scripts\libs\angularfire.js" />
@@ -169,7 +181,7 @@
     <Content Include="scss\ionic\_util.scss" />
     <Content Include="scss\ionic\_variables.scss" />
     <Content Include="templates\side-menu.html" />
-    <Folder Include="images\" />
+    <Content Include="views\auctions.html" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Folder Include="merges\ios\" />
