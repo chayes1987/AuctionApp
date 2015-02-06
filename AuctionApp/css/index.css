@@ -24,3 +24,7 @@
 .mymenu .item-complex .item-content, .mymenu .item-radio .item-content {
   background-color: transparent;
 }
+
+.ratings{
+	color:#ed9a26;
+}
