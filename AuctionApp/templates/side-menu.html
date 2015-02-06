@@ -2,7 +2,7 @@
     <div class="item item-divider">
         Navigation
     </div>
-    <a class="item item-icon-left item-icon-right" ng-href="#auctions" ng-click="showMain()">
+    <a class="item item-icon-left item-icon-right" ng-href="#auctions" ng-click="toggleRight()">
         <i class="icon ion-grid"></i>
         Auctions
         <i class="icon ion-ios7-arrow-right"></i>
@@ -10,17 +10,17 @@
     <div class="item item-divider">
         Account
     </div>
-    <a ng-show="user.email === undefined" class="item item-icon-left item-icon-right" ng-href="#login" ng-click="showMain()">
+    <a ng-show="user.email === undefined" class="item item-icon-left item-icon-right" ng-href="#login" ng-click="toggleRight()">
         <i class="icon ion-log-in"></i>
         Log In
         <i class="icon ion-ios7-arrow-right"></i>
     </a>
-    <a ng-show="user.email !== undefined" class="item item-icon-left item-icon-right" ng-href="#auction" ng-click="showMain()">
+    <a ng-show="user.email !== undefined" class="item item-icon-left item-icon-right" ng-href="#auction" ng-click="toggleRight()">
         <i class="icon ion-ios7-person"></i>
         {{user.email}}
         <i class="icon ion-ios7-arrow-right"></i>
     </a>
-    <a ng-show="user.email !== undefined" class="item item-icon-left item-icon-right" ng-href="#logout" ng-click="showMain()">
+    <a ng-show="user.email !== undefined" class="item item-icon-left item-icon-right" ng-href="#logout" ng-click="toggleRight()">
         <i class="icon ion-log-out"></i>
         Log Out
         <i class="icon ion-ios7-arrow-right"></i>
