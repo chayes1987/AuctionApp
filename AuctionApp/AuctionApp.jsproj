@@ -168,6 +168,7 @@
     <Content Include="scss\ionic\_type.scss" />
     <Content Include="scss\ionic\_util.scss" />
     <Content Include="scss\ionic\_variables.scss" />
+    <Content Include="templates\side-menu.html" />
     <Folder Include="images\" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />

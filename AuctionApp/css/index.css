@@ -1,2 +1,26 @@
-﻿body {
+﻿body{
+	color:#909090;
+	font-family:'Segoe UI Light';
+}
+
+.myBg{
+	background-color:#f7f0f0;
+}
+
+.mymenu {
+  background-color:#232323;
+  color:#909090;
+}
+
+.mymenu .item {
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #333333;
+  color:#909090;
+}
+
+.mymenu .item-complex .item-content, .mymenu .item-radio .item-content {
+  background-color: transparent;
 }
