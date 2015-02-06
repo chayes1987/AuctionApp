@@ -199,6 +199,7 @@
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Content Include="views\item.html" />
     <Content Include="views\login.html" />
+    <Content Include="views\auction.html" />
     <Folder Include="merges\ios\" />
     <Content Include="merges\windows\scripts\platformOverrides.js" />
     <Content Include="merges\windows\scripts\winstore-jscompat.js" />
