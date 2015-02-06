@@ -24,6 +24,11 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
     })
+    .when('/logout',
+    {
+        template: 'Logging out...',
+        controller: 'LogoutCtrl'
+    })
     .otherwise({ redirectTo: '/auctions' });
 });
 
@@ -114,4 +119,10 @@ app.controller('LoginCtrl', ['$scope', '$firebaseSimpleLogin', 'FIREBASE_DB', '$
             };
         });
     };
+}]);
+
+app.controller('LogoutCtrl', ['$firebaseSimpleLogin', 'FIREBASE_DB', '$rootScope', function ($firebaseSimpleLogin, FIREBASE_DB, $rootScope) {
+    $firebaseSimpleLogin(new Firebase(FIREBASE_DB)).$logout();
+    $rootScope.user = undefined;
+    window.location.href = '#auctions';
 }]);
