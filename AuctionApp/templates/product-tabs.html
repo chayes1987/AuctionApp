@@ -1,0 +1,22 @@
+﻿<section>
+    <br />
+    <ul class="nav nav-pills smallerFont">
+        <li ng-class="{ active:isSet(1) }">
+            <a href ng-click="setTab(1)">Description</a>
+        </li>
+        <li ng-class="{ active:isSet(2) }">
+            <a href ng-click="setTab(2)">Specs</a>
+        </li>
+        <li ng-class="{ active:isSet(3) }">
+            <a href ng-click="setTab(3)">Details</a>
+        </li>
+        <li ng-class="{ active:isSet(4) }">
+            <a href ng-click="setTab(4)">Reviews</a>
+        </li>
+    </ul>
+    <br />
+    <product-description ng-show="isSet(1)"></product-description>
+    <product-specs ng-show="isSet(2)"></product-specs>
+    <product-details ng-show="isSet(3)"></product-details>
+    <seller-reviews ng-show="isSet(4)"></seller-reviews>
+</section>

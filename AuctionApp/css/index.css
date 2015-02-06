@@ -3,6 +3,24 @@
 	font-family:'Segoe UI Light';
 }
 
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+.productName{
+	color:#909090;
+	font-size:1em;
+}
+
 .myBg{
 	background-color:#f7f0f0;
 }
@@ -27,4 +45,12 @@
 
 .ratings{
 	color:#ed9a26;
+}
+
+.smallerFont{
+	font-size:.85em;
+}
+
+.imgContainer{
+	height:200px;
 }

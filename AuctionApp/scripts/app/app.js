@@ -14,6 +14,11 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/auctions.html',
         controller: 'MainCtrl'
     })
+    .when('/item/:itemId',
+    {
+        templateUrl: 'views/item.html',
+        controller: 'MainCtrl'
+    })
     .otherwise({ redirectTo: '/auctions' });
 });
 
@@ -33,6 +38,25 @@ app.controller('MainCtrl', ['$scope', '$location', '$routeParams', 'FireBaseServ
     $scope.$on('repeatFinished', function (ngRepeatFinishedEvent) {
         $scope.loading = false;
     });
+
+    $scope.tab = 1;
+
+    $scope.isSet = function (checkTab) {
+        return $scope.tab === checkTab;
+    };
+
+    $scope.setTab = function (activeTab) {
+        $scope.tab = activeTab;
+    };
+
+    if ($routeParams.itemId != undefined) {
+        $scope.item = {};
+        angular.forEach($scope.items, function (value, index) {
+            if (value.$id == $routeParams.itemId) {
+                $scope.item = value;
+            }
+        });
+    };
 }]);
 
 app.controller('ContentCtrl', ['$scope', '$ionicSideMenuDelegate', '$ionicSlideBoxDelegate', function ($scope, $ionicSideMenuDelegate, $ionicSlideBoxDelegate) {

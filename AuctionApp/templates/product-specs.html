@@ -1,0 +1,5 @@
+﻿<ul ng-repeat="spec in item.item.specs">
+    <li ng-repeat="(key, value) in spec">
+        <strong>{{key | capitalize}}</strong>: {{value}}
+    </li>
+</ul>
