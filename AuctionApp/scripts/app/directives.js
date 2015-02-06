@@ -60,3 +60,11 @@ app.directive('sellerAvgRating', function () {
         }
     };
 });
+
+app.directive('itemsLoaded', function () {
+    return function (scope, element, attrs) {
+        if (scope.$last) {
+            scope.$emit('repeatFinished');
+        }
+    };
+});

@@ -28,6 +28,11 @@ app.factory('FireBaseService', ['$firebase', 'FIREBASE_DB', function ($firebase,
 
 app.controller('MainCtrl', ['$scope', '$location', '$routeParams', 'FireBaseService', function ($scope, $location, $routeParams, FireBaseService) {
     $scope.items = FireBaseService.items;
+    $scope.loading = true;
+
+    $scope.$on('repeatFinished', function (ngRepeatFinishedEvent) {
+        $scope.loading = false;
+    });
 }]);
 
 app.controller('ContentCtrl', ['$scope', '$ionicSideMenuDelegate', '$ionicSlideBoxDelegate', function ($scope, $ionicSideMenuDelegate, $ionicSlideBoxDelegate) {

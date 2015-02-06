@@ -1,6 +1,7 @@
-﻿<div>
+﻿<div style="text-align:center;font-size:2em;" ng-show="loading"><i class="icon ion-loading-c"></i></div>
+<div ng-hide="loading">
     <br />
-    <div class="col-md-3 col-sm-6 repeat-animation" ng-repeat="item in items | orderByPriority | orderBy:'item._id'" products-loaded>
+    <div class="col-md-3 col-sm-6 repeat-animation" ng-repeat="item in items | orderByPriority | orderBy:'item._id'" items-loaded>
         <div class="thumbnail shadow">
             <a href="#/item/{{item.$id}}">
                 <img ng-src="{{item.item.images[0]}}" />
