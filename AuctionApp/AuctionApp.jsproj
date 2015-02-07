@@ -132,6 +132,10 @@
     <Content Include="images\iPhone6\iphone2.jpg" />
     <Content Include="images\iPhone6\iphone3.jpg" />
     <Content Include="images\iPhone6\iphone4.jpg" />
+    <Content Include="images\mac\mac1.jpg" />
+    <Content Include="images\mac\mac2.jpg" />
+    <Content Include="images\mac\mac3.png" />
+    <Content Include="images\mac\mac4.jpg" />
     <Content Include="images\omen\omen1.jpg" />
     <Content Include="images\omen\omen2.jpg" />
     <Content Include="images\omen\omen3.jpg" />
