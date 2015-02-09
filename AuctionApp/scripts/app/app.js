@@ -6,6 +6,7 @@
 ]);
 
 app.constant('FIREBASE_DB', 'https://auctionapp.firebaseio.com/');
+app.constant('WEB_SERVICE_URL', 'http://127.0.0.1:8080/placebidservice/bidder/services/placebid/');
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -137,11 +138,11 @@ app.controller('LogoutCtrl', ['$firebaseSimpleLogin', 'FIREBASE_DB', '$rootScope
     window.location.href = '#auctions';
 }]);
 
-app.controller('AuctionCtrl', ['$scope', '$firebase', '$routeParams', '$http', 'FireBaseService', 'FIREBASE_DB', function ($scope, $firebase, $routeParams, $http, FireBaseService, FIREBASE_DB) {
+app.controller('AuctionCtrl', ['$scope', '$firebase', '$routeParams', '$http', 'FireBaseService', 'FIREBASE_DB', 'WEB_SERVICE_URL', '$rootScope', function ($scope, $firebase, $routeParams, $http, FireBaseService, FIREBASE_DB, WEBSERVICE_URL, $rootScope) {
     $scope.auctions = FireBaseService.auctions;
 
     $scope.placeBid = function () {
-        $http.get('http://localhost:8080/placebidservice/bidder/services/placebid/' + $scope.auction._id + '/' + $rootScope.user.email).
+        $http.get(WEB_SERVICE_URL + $scope.auction._id + '/' + $rootScope.user.email).
             success(function () {
                 alert("Bid has been placed!");
             }).error(function () {
