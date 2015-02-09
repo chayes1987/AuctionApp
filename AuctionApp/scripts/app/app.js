@@ -9,9 +9,9 @@ app.constant('FIREBASE_DB', 'https://auctionapp.firebaseio.com/');
 
 app.config(function ($routeProvider) {
     $routeProvider
-    .when('/auctions',
+    .when('/items',
     {
-        templateUrl: 'views/auctions.html',
+        templateUrl: 'views/items.html',
         controller: 'MainCtrl'
     })
     .when('/item/:itemId',
@@ -19,9 +19,14 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/item.html',
         controller: 'MainCtrl'
     })
-    .when('/auction',
+    .when('/auction/:auctionid',
     {
         templateUrl: 'views/auction.html',
+        controller: 'AuctionCtrl'
+    })
+    .when('/auctions',
+    {
+        templateUrl: 'views/auctions.html',
         controller: 'AuctionCtrl'
     })
     .when('/login',
@@ -34,14 +39,14 @@ app.config(function ($routeProvider) {
         template: 'Logging out...',
         controller: 'LogoutCtrl'
     })
-    .otherwise({ redirectTo: '/auctions' });
+    .otherwise({ redirectTo: '/items' });
 });
 
 app.factory('FireBaseService', ['$firebase', 'FIREBASE_DB', function ($firebase, FIREBASE_DB) {
     var factory = {};
 
     factory.items = $firebase(new Firebase(FIREBASE_DB + "items"));
-    factory.auctions = $firebase(new Firebase(FIREBASE_DB + "auctions/1"));
+    factory.auctions = $firebase(new Firebase(FIREBASE_DB + "auctions"));
 
     return factory;
 }]);
@@ -132,8 +137,8 @@ app.controller('LogoutCtrl', ['$firebaseSimpleLogin', 'FIREBASE_DB', '$rootScope
     window.location.href = '#auctions';
 }]);
 
-app.controller('AuctionCtrl', ['$scope', '$location', '$http', 'FireBaseService', '$rootScope', function ($scope, $location, $http, FireBaseService, $rootScope) {
-    $scope.auction = FireBaseService.auctions;
+app.controller('AuctionCtrl', ['$scope', '$location', '$routeParams', '$http', 'FireBaseService', function ($scope, $location, $routeParams, $http, FireBaseService) {
+    $scope.auctions = FireBaseService.auctions;
 
     $scope.placeBid = function () {
         $http.get('http://127.0.0.1:8080/placebidservice/web/services/placebid/1/' + $rootScope.user.email).
@@ -143,4 +148,9 @@ app.controller('AuctionCtrl', ['$scope', '$location', '$http', 'FireBaseService'
                 alert("Server not available");
             });
     }
+
+    if ($routeParams.auctionid != null) {
+        alert($routeParams.auctionid);
+        $scope.auction = $firebase(new Firebase(FIREBASE_DB + "auctions/" + $routeParams.auctionid));
+    };
 }]);

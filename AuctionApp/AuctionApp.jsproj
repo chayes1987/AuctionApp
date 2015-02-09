@@ -199,6 +199,7 @@
     <Content Include="templates\seller-reviews.html" />
     <Content Include="templates\side-menu.html" />
     <Content Include="views\auctions.html" />
+    <Content Include="views\items.html" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Content Include="views\item.html" />
