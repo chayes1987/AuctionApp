@@ -1,20 +1,17 @@
-﻿<div class="container">
-    <br />
-    <h1><i class="icon ion-folder"></i> My Auctions</h1>
-    <div class="col-md-3 col-sm-6 repeat-animation" ng-repeat="auction in auctions | orderByPriority">
-        <div class="thumbnail shadow">
-            <a href="#/auction/{{auction.$id}}">
-                <img ng-src="{{auction.image}}" />
-            </a>
-            <div class="caption">
-                <h4 class="pull-right">{{auction.current_bid | currency:"&euro;"}}</h4>
-                <h4><a href="">{{auction.name}}</a></h4>
-                <h5 ng-show="auction.winner !== ''">Winner: {{auction.winner}}</h5>
-                <h5>Status: {{auction.status}}</h5>
-            </div>
-            <a href="#auction/{{auction.$id}}">
-                <button type="button" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-search"></span> View</button>
-            </a>
+﻿<br />
+<div class="col-md-3 col-sm-6 repeat-animation" ng-repeat="auction in auctions | orderByPriority">
+    <div class="thumbnail shadow">
+        <a href="#/auction/{{auction.$id}}">
+            <img ng-src="{{auction.image}}" />
+        </a>
+        <div class="caption">
+            <h4 class="pull-right">{{auction.current_bid | currency:"&euro;"}}</h4>
+            <h4><a href="">{{auction.name}}</a></h4>
+            <h5 ng-show="auction.winner !== ''">Winner: {{auction.winner}}</h5>
+            <h5>Status: {{auction.status}}</h5>
         </div>
+        <a href="#auction/{{auction.$id}}">
+            <button type="button" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-search"></span> View</button>
+        </a>
     </div>
 </div>

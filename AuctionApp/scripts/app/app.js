@@ -80,7 +80,8 @@ app.controller('MainCtrl', ['$scope', '$location', '$routeParams', 'FireBaseServ
     };
 }]);
 
-app.controller('ContentCtrl', ['$scope', '$ionicSideMenuDelegate', '$ionicSlideBoxDelegate', function ($scope, $ionicSideMenuDelegate, $ionicSlideBoxDelegate) {
+app.controller('ContentCtrl', ['$scope', '$ionicSideMenuDelegate', '$ionicSlideBoxDelegate',
+    function ($scope, $ionicSideMenuDelegate, $ionicSlideBoxDelegate) {
     $scope.toggleLeft = function () {
         $ionicSideMenuDelegate.toggleLeft();
     };
