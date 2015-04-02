@@ -1,7 +1,10 @@
-﻿<div style="text-align:center;font-size:2em;" ng-show="loading"><i class="icon ion-loading-c"></i></div>
+﻿<div style="text-align:center;font-size:2em;" ng-show="loading">
+    <i class="icon ion-loading-c"></i>
+</div>
 <div ng-hide="loading">
     <br />
-    <div class="col-md-3 col-sm-6 repeat-animation" ng-repeat="item in items | orderByPriority | orderBy:'item._id'" items-loaded>
+    <div class="col-md-3 col-sm-6 repeat-animation"
+         ng-repeat="item in items | orderByPriority | orderBy:'item._id'" items-loaded>
         <div class="thumbnail shadow">
             <a href="#/item/{{item.$id}}">
                 <img ng-src="{{item.item.images[0]}}" />
@@ -11,9 +14,13 @@
                 <h4><a href="">{{item.item.name}}</a></h4>
             </div>
             <product-description></product-description>
-            <button type="button" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-plus"></span> Register</button>
+            <button type="button" class="btn btn-sm btn-success">
+                <span class="glyphicon glyphicon-plus"></span> Register
+            </button>
             <a href="#item/{{item.$id}}">
-                <button type="button" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-search"></span> View</button>
+                <button type="button" class="btn btn-sm btn-primary">
+                    <span class="glyphicon glyphicon-search"></span> View
+                </button>
             </a>
         </div>
     </div>
