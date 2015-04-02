@@ -109,17 +109,14 @@ app.controller('LoginCtrl', ['$scope', '$firebaseSimpleLogin', 'FIREBASE_DB', '$
             return;
         };
 
-        // Login
         $firebaseSimpleLogin(new Firebase(FIREBASE_DB)).$login('password', {
             email: $scope.userEmail,
             password: $scope.userPassword,
             rememberMe: $scope.rememberMe
         }).then(function (user) {
-            // Success
             $rootScope.user = user;
             window.location.href = '#auctions';
         }, function (error) {
-            // Check Error Code
             if (error.code === 'INVALID_USER') {
                 $scope.errors.push('The Email is invalid');
                 return;
