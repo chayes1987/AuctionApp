@@ -133,7 +133,7 @@ app.controller('LoginCtrl', ['$scope', '$firebaseSimpleLogin', 'FIREBASE_DB', '$
 app.controller('LogoutCtrl', ['$firebaseSimpleLogin', 'FIREBASE_DB', '$rootScope', function ($firebaseSimpleLogin, FIREBASE_DB, $rootScope) {
     $firebaseSimpleLogin(new Firebase(FIREBASE_DB)).$logout();
     $rootScope.user = undefined;
-    window.location.href = '#auctions';
+    window.location.href = '#items';
 }]);
 
 app.controller('AuctionCtrl', ['$scope', '$firebase', '$routeParams', '$http', 'FireBaseService', 'FIREBASE_DB', 'WEB_SERVICE_URL', '$rootScope', function ($scope, $firebase, $routeParams, $http, FireBaseService, FIREBASE_DB, WEB_SERVICE_URL, $rootScope) {
