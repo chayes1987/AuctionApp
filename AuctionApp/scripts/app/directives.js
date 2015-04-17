@@ -1,4 +1,6 @@
-﻿var app = angular.module('directives', []);
+﻿// Ratings -> http://g00glen00b.be/introduction-angularjs-directives/
+
+var app = angular.module('directives', []);
 
 app.directive('sideMenu', function () {
     return {
