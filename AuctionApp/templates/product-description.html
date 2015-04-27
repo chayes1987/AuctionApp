@@ -1,6 +1,11 @@
-﻿<div class="caption">
+﻿<!-- Author - Conor Hayes
+    Coding Standards -> http://docs.ckan.org/en/latest/contributing/html.html
+    -->
+
+<div class="caption">
     <p class="item-text-wrap" style="font-size:1em;">{{item.item.description}}</p>
     <p></p>
+    <!-- Creates the star effect for ratings using a directive -->
     <div class="ratings">
         <p class="pull-right">{{item.seller.reviews.length}} reviews</p>
         <seller-avg-rating max="5" reviews="item.seller.reviews"></seller-avg-rating>

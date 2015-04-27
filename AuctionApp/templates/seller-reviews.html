@@ -1,6 +1,12 @@
-﻿<div class="list" ng-repeat="review in item.seller.reviews">
+﻿<!-- Author - Conor Hayes
+    Coding Standards -> http://docs.ckan.org/en/latest/contributing/html.html
+    -->
+
+<!-- Shows each review in the sellers reviews -->
+<div class="list" ng-repeat="review in item.seller.reviews">
     <div class="item">
         <h2><i class="icon ion-android-social-user"></i>&nbsp;&nbsp;&nbsp;{{review.author}}</h2>
+        <!-- Creates the star effect for ratings using a directive -->
         <div class="ratings">
             <seller-rating max="5" rating="review.rating"></seller-rating>
         </div> 

@@ -1,5 +1,11 @@
-﻿<br />
+﻿<!-- Author - Conor Hayes
+    Coding Standards -> http://docs.ckan.org/en/latest/contributing/html.html
+    -->
+
+<br />
+<!-- Create the card to hold the items and ng-repeat to create all of them -->
 <div class="col-md-3 col-sm-6 repeat-animation" ng-repeat="auction in auctions | orderByPriority">
+    <!-- Contains all auction details -->
     <div class="thumbnail shadow">
         <a href="#/auction/{{auction.$id}}">
             <img ng-src="{{auction.image}}" />
@@ -10,6 +16,7 @@
             <h5 ng-show="auction.winner !== ''">Winner: {{auction.winner}}</h5>
             <h5>Status: {{auction.status}}</h5>
         </div>
+        <!-- View the auction details -->
         <a href="#auction/{{auction.$id}}">
             <button type="button" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-search"></span> View</button>
         </a>

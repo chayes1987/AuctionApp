@@ -1,8 +1,15 @@
-﻿<div style="text-align:center;font-size:2em;" ng-show="loading">
+﻿<!-- Author - Conor Hayes
+    Coding Standards -> http://docs.ckan.org/en/latest/contributing/html.html
+    -->
+
+<!-- Loading spinner -->
+<div style="text-align:center;font-size:2em;" ng-show="loading">
     <i class="icon ion-loading-c"></i>
 </div>
+<!-- Hide items while data is being loaded -->
 <div ng-hide="loading">
     <br />
+    <!-- Create the card to hold the items and ng-repeat to create all of them -->
     <div class="col-md-3 col-sm-6 repeat-animation"
          ng-repeat="item in items | orderByPriority | orderBy:'item._id'" items-loaded>
         <div class="thumbnail shadow">
@@ -13,6 +20,7 @@
                 <h4 class="pull-right">{{item.item.starting_bid | currency:"&euro;"}}</h4>
                 <h4><a href="">{{item.item.name}}</a></h4>
             </div>
+            <!-- Product/Item description directive -->
             <product-description></product-description>
             <button type="button" class="btn btn-sm btn-success">
                 <span class="glyphicon glyphicon-plus"></span> Register

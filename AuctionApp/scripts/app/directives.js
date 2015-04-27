@@ -1,7 +1,11 @@
-﻿// Ratings -> http://g00glen00b.be/introduction-angularjs-directives/
+﻿/*
+    Author - Conor Hayes
+*/
 
+/* Create a new Angular Module */
 var app = angular.module('directives', []);
 
+/* Directive for the side-menu */
 app.directive('sideMenu', function () {
     return {
         restrict: 'E',
@@ -10,6 +14,7 @@ app.directive('sideMenu', function () {
     };
 });
 
+/* Directive for the item/product description */
 app.directive('productDescription', function () {
     return {
         restrict: 'E',
@@ -17,6 +22,10 @@ app.directive('productDescription', function () {
     };
 });
 
+/*
+    Directive to show the average star rating of a given seller based on a cumulation of all their ratings
+    http://g00glen00b.be/introduction-angularjs-directives/
+*/
 app.directive('sellerAvgRating', function () {
     return {
         restrict: 'E',
@@ -63,6 +72,10 @@ app.directive('sellerAvgRating', function () {
     };
 });
 
+/*
+    Directive to tell the controller that the data has been loaded - used for loading spinner
+    http://stackoverflow.com/questions/15207788/calling-a-function-when-ng-repeat-has-finished
+*/
 app.directive('itemsLoaded', function () {
     return function (scope, element, attrs) {
         if (scope.$last) {
@@ -71,6 +84,10 @@ app.directive('itemsLoaded', function () {
     };
 });
 
+/*
+    A filter to set the first letter of the given input to uppercase
+    Used in the specifications of an item as Firebase stores them as lowercase
+*/
 app.filter('capitalize', function () {
     return function (input, scope) {
         if (input != null)
@@ -79,6 +96,10 @@ app.filter('capitalize', function () {
     }
 });
 
+/*
+    Directive to show the star rating of a given seller based on individual reviews
+    http://g00glen00b.be/introduction-angularjs-directives/
+*/
 app.directive('sellerRating', function () {
     return {
         restrict: 'E',
@@ -117,6 +138,7 @@ app.directive('sellerRating', function () {
     };
 });
 
+/* Directive for the item/product details */
 app.directive('productDetails', function () {
     return {
         restrict: 'E',
@@ -124,6 +146,7 @@ app.directive('productDetails', function () {
     };
 });
 
+/* Directive for the item/product specifications */
 app.directive('productSpecs', function () {
     return {
         restrict: 'E',
@@ -131,6 +154,7 @@ app.directive('productSpecs', function () {
     };
 });
 
+/* Directive for the item/product tabs */
 app.directive('productTabs', function () {
     return {
         restrict: 'E',
@@ -139,6 +163,7 @@ app.directive('productTabs', function () {
     };
 });
 
+/* Directive for the item/product gallery */
 app.directive('productGallery', function () {
     return {
         restrict: 'E',
@@ -146,6 +171,7 @@ app.directive('productGallery', function () {
     };
 });
 
+/* Directive for the seller reviews */
 app.directive('sellerReviews', function () {
     return {
         restrict: 'E',

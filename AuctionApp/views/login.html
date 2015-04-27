@@ -1,7 +1,13 @@
-﻿<br />
+﻿<!-- Author - Conor Hayes
+    Coding Standards -> http://docs.ckan.org/en/latest/contributing/html.html
+    -->
+
+<br />
+<!-- Shows any errors to the user, e.g. wrong username or password -->
 <div class="alert alert-danger" ng-repeat="error in errors">
     {{error}}
 </div>
+<!-- A card to enter and submit the credentials -->
 <div class="list list-inset">
     <label class="item item-input">
         <input type="email" placeholder="Email" ng-model="userEmail">
@@ -10,6 +16,7 @@
         <input type="password" placeholder="Password" ng-model="userPassword">
     </label>
 </div>
+<!-- Calls login function -->
 <button class="button button-block button-positive" ng-click="login()">
     Login
 </button>

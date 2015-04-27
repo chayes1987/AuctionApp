@@ -1,4 +1,9 @@
-﻿<section>
+﻿<!-- Author - Conor Hayes
+    Coding Standards -> http://docs.ckan.org/en/latest/contributing/html.html
+    -->
+
+<!-- Different partial files are shown depending on which tab is selected -->
+<section>
     <br />
     <ul class="nav nav-pills smallerFont">
         <li ng-class="{ active:isSet(1) }">
@@ -15,6 +20,7 @@
         </li>
     </ul>
     <br />
+    <!-- Directives used to select which file is shown -->
     <product-description ng-show="isSet(1)"></product-description>
     <product-specs ng-show="isSet(2)"></product-specs>
     <product-details ng-show="isSet(3)"></product-details>

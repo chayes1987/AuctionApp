@@ -1,4 +1,9 @@
-﻿<ul ng-repeat="spec in item.item.specs">
+﻿<!-- Author - Conor Hayes
+    Coding Standards -> http://docs.ckan.org/en/latest/contributing/html.html
+    -->
+
+<!-- Works like a nested for-loop, ng-repeat within an ng-repeat, capitialize directive used -->
+<ul ng-repeat="spec in item.item.specs">
     <li ng-repeat="(key, value) in spec">
         <strong>{{key | capitalize}}</strong>: {{value}}
     </li>
